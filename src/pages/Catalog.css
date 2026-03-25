@@ -1,0 +1,162 @@
+/* src/pages/Catalog.css */
+
+.catalog-page {
+  position: relative;
+  background-color: #F6F2ED;        /* такой же фон, как у hero */
+  max-width: calc(100% - 200px);    /* отступы по бокам 100px */
+  margin: 0 auto;                   /* центрирование */
+  border-radius: 0 0 24px 24px;     /* скругление только снизу */
+  padding: 40px 40px 60px;          /* внутренние отступы для контента */
+  box-shadow: -12px 0 20px -8px rgba(0,0,0,0.2), 
+              12px 0 20px -8px rgba(0,0,0,0.2), 
+              0 12px 20px -8px rgba(0,0,0,0.2); /* тень как у hero */
+  margin-top: 0;                    /* прилегает к хедеру */
+}
+
+/* Контейнер для содержимого – убираем лишние отступы */
+.catalog-container {
+  width: 100%;
+}
+
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.catalog-title-section {
+  flex: 1;
+  margin-left: 90px; 
+}
+
+@media (max-width: 768px) {
+  .catalog-page {
+    max-width: calc(100% - 40px);
+    padding: 30px 20px;
+  }
+  .catalog-title-section {
+    margin-left: 0;           /* на мобильных убираем дополнительный отступ */
+  }
+}
+
+.catalog-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: #1E1E1E;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.catalog-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #6B6B6B;
+  line-height: 1.5;
+}
+
+.catalog-search {
+  margin-bottom: 20px;
+  margin-right: 90px;
+  position: relative;
+  min-width: 300px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 20px 14px 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  border: 1px solid #E0DCD5;
+  border-radius: 50px;
+  background: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #9EAEAA;
+  box-shadow: 0 4px 12px rgba(127, 140, 109, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  margin-top: 2px;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #8E8E8E;
+  pointer-events: none;
+}
+
+.catalog-decor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.decor-items {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 32px;
+  opacity: 0.3;
+}
+
+.decor-coffee, .decor-leaf {
+  transition: transform 0.3s ease;
+}
+
+.decor-coffee:hover, .decor-leaf:hover {
+  transform: scale(1.1);
+  opacity: 0.6;
+}
+
+.no-results {
+  text-align: center;
+  padding: 80px 20px;
+  color: #6B6B6B;
+  font-family: 'Inter', sans-serif;
+}
+
+.no-results p:first-child {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #2C2C2C;
+}
+
+.no-results-sub {
+  font-size: 16px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .catalog-page {
+    max-width: calc(100% - 40px);  /* на мобильных отступы 20px */
+    padding: 30px 20px;
+  }
+  
+  .catalog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .catalog-title {
+    font-size: 36px;
+  }
+  
+  .catalog-search {
+    width: 100%;
+  }
+  
+  .decor-items {
+    font-size: 24px;
+  }
+}

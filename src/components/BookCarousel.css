@@ -1,0 +1,77 @@
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 10px 80px 80px 100px;  /* правый отступ 80px, левый 90px */
+  margin: 0;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+  width: 240px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #E0DCD5;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: #4A4A4A;
+}
+
+.carousel-btn.prev {
+  left: 60px;  /* отступ от левого края контейнера */
+}
+
+.carousel-btn.next {
+  right: 60px;
+}
+
+@media (max-width: 768px) {
+  .carousel-track {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .carousel-btn.prev {
+    left: 10px;
+  }
+  .carousel-btn.next {
+    right: 10px;
+  }
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+  .carousel-slide {
+    width: 220px;
+  }
+}

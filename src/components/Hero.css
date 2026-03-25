@@ -1,0 +1,133 @@
+/* src/components/Hero.css */
+.hero {
+background-color: #F6F2ED;
+  max-width: calc(100% - 200px);
+  margin: 0 auto;
+  border-radius: 0 0 24px 24px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 0 60px 130px;
+  box-shadow: 
+    -12px 0 20px -8px rgba(0,0,0,0.2),  /* левая тень */
+    12px 0 20px -8px rgba(0,0,0,0.2),   /* правая тень */
+    0 12px 20px -8px rgba(0,0,0,0.2);   /* нижняя тень */
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 45.8%;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 56%;
+  margin-right: 0;
+}
+
+/* Стили для заголовка */
+.hero-title {
+  font-size: 58px;
+  font-weight: 500;
+  color: #1E1E1E;
+  margin-top: -100px;
+  letter-spacing: -0.02em;
+}
+
+/* Стили для описания */
+.hero-description {
+  font-size: 18px;
+  color: #6B6B6B;
+  margin-top: 30px;
+  margin-bottom: 50px; /* увеличиваем отступ снизу */
+  max-width: 90%;
+  line-height: 1.6;
+}
+
+/* Блок с кнопками */
+.hero-buttons {
+  display: flex;
+  gap: 70px; /* увеличиваем расстояние между кнопками */
+  align-items: center;
+}
+
+/* Базовые стили для всех кнопок */
+.btn {
+  padding: 12px 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Основная кнопка (Sage Green) */
+.btn-primary {
+  background-color: #9EAEAA; /* Твой мягкий приглушенный зеленый */
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary:hover {
+  background-color: #8D9F9A; /* Более темный оттенок при наведении */
+  transform: translateY(-2px); /* Легкая анимация */
+}
+
+/* Вторичная кнопка (Белая с тенью) */
+.btn-secondary {
+  background-color: white;
+  color: #4A4A4A;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #F0EEE9;
+}
+
+.btn-secondary:hover {
+  background-color: #F9F7F3;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Стили для изображения */
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* если нужно, можно сдвинуть вправо за пределы блока:
+     margin-right: -40px; */
+}
+
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    max-width: calc(100% - 40px); /* на мобильных уменьшаем отступы до 20px с каждой стороны */
+    margin-top: 40px;
+    padding: 40px 20px;
+    gap: 40px;
+    text-align: center;
+  }
+  .hero-content, .hero-image {
+    max-width: 100%;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-description {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    max-width: calc(100% - 40px);
+    padding: 20px 20px;
+  }
+}

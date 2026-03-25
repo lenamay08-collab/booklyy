@@ -1,0 +1,70 @@
+/* src/pages/Pages.css */
+.page-container {
+  margin-top: 60px;
+  text-align: center;
+  min-height: 60vh;
+}
+
+.page-container h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #1E1E1E;
+  font-family: 'Playfair Display', serif;
+}
+
+.page-container p {
+  font-size: 18px;
+  color: #6B6B6B;
+  font-family: 'Inter', sans-serif;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Специальные стили для каталога, если хочешь добавить сетку книг позже */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.library-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 800px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  padding: 10px 16px;
+  border: 1px solid #E0DCD5;
+  border-radius: 30px;
+  width: 250px;
+  font-family: 'Inter', sans-serif;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.filter-buttons button {
+  background: none;
+  border: 1px solid #E0DCD5;
+  padding: 8px 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.filter-buttons button.active {
+  background-color: #7F8C6D;
+  border-color: #7F8C6D;
+  color: white;
+}
