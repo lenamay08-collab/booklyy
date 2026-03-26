@@ -1,13 +1,23 @@
 /* src/pages/Pages.css */
 .page-container {
-  margin-top: 60px;
-  text-align: center;
-  min-height: 60vh;
+  position: relative;
+  background-color: #F6F2ED;
+  max-width: calc(100% - 200px);  
+  min-width: 90vw;  
+  margin: 0 auto;
+  border-radius: 0 0 24px 24px;     
+  padding: 200px 40px 60px;          
+  box-shadow: -12px 0 20px -8px rgba(0,0,0,0.2), 
+              12px 0 20px -8px rgba(0,0,0,0.2), 
+              0 12px 20px -8px rgba(0,0,0,0.2); 
+  margin-top: 0;
+  height: 100vh;;
 }
 
 .page-container h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  text-align: center;
   color: #1E1E1E;
   font-family: 'Playfair Display', serif;
 }

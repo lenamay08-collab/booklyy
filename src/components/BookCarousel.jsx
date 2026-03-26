@@ -6,7 +6,7 @@ const BookCarousel = ({ books }) => {
   const carouselRef = useRef(null);
 
   const cardWidth = 240;
-  const gap = 24;
+  const gap = 1;
   const scrollStep = 3 * (cardWidth + gap) - gap; // ширина трёх карточек с промежутками
 
   const scroll = (direction) => {

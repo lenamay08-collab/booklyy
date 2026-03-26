@@ -3,8 +3,8 @@
 .header {
   background-color: #EDE6E1;
   max-width: calc(100% - 200px);
-  margin: 0 auto;
   border-radius: 24px 24px 0 0;
+  min-width: 90vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,9 +13,11 @@
   font-weight: 500;
   color: #4A4A4A;
   border-bottom: 2px solid #DADADA;
-  position: relative;
+  position: fixed;
   z-index: 10;
-   box-shadow: -12px 0 20px -8px rgba(0,0,0,0.2), 12px 0 20px -8px rgba(0,0,0,0.2);
+  box-shadow: -12px 0 20px -8px rgba(0,0,0,0.2), 12px 0 20px -8px rgba(0,0,0,0.2);
+  left: 50%;  
+  transform: translate(-50%, 0); 
 }
 
 .header-logo {

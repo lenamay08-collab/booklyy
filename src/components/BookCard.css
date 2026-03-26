@@ -4,10 +4,10 @@
   border-radius: 16px;
   padding: 16px;          /* было 20px */
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   min-width: 240px;       /* было 280px */
   max-width: 240px;
+  transition: all 1s;
 }
 
 .book-card:hover {

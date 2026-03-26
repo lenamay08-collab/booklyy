@@ -1,6 +1,7 @@
 .carousel-container {
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   margin: 30px 0;
   width: 100%;
@@ -8,11 +9,12 @@
 
 .carousel-track {
   display: flex;
-  gap: 30px;
+  gap: 5vw;
   overflow-x: auto;
+  overflow: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  padding: 10px 80px 80px 100px;  /* правый отступ 80px, левый 90px */
+  padding: 10px 0;  /* правый отступ 80px, левый 90px */
   margin: 0;
   width: 90%;
   box-sizing: border-box;
@@ -48,11 +50,11 @@
 }
 
 .carousel-btn.prev {
-  left: 60px;  /* отступ от левого края контейнера */
+  left: 0;  /* отступ от левого края контейнера */
 }
 
 .carousel-btn.next {
-  right: 60px;
+  right: 0;
 }
 
 @media (max-width: 768px) {

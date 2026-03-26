@@ -25,7 +25,8 @@ body {
 }
 
 .app {
-    background-color: #EEE7E1;
+  height: 100vh;
+  background-color: #EEE7E1;
   position: relative; /* Нужно для позиционирования декоративных элементов */
   overflow-x: hidden; /* Чтобы декоративные элементы не создавали горизонтальный скролл */
 }
