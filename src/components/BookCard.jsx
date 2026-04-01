@@ -3,16 +3,15 @@ import { useBooks } from '../context/BookContext';
 import './BookCard.css';
 
 const BookCard = ({ book, showActions = true }) => {
-  const { userBooks, addToLibrary, updateBookStatus, removeFromLibrary, toggleFavorite, isFavorite } = useBooks();
+  console.log('BookCard book:', book);
+  const { userBooks, addToLibrary, updateBookStatus, removeFromLibrary, toggleFavorite, isFavorite, isBookInLibrary, getUserBookStatus } = useBooks();
   
-  const userBook = userBooks.find(b => b.id === book.id);
-  const status = userBook?.status || null;
+  const isInLibrary = isBookInLibrary(book.id);
+  const status = getUserBookStatus(book.id);
   const favorite = isFavorite(book.id);
-  const isInLibrary = !!userBook;
 
   const handleStatusClick = (newStatus) => {
     if (!isInLibrary) {
-      // Если книги нет в библиотеке, сначала добавляем, затем меняем статус
       addToLibrary(book, newStatus);
     } else {
       updateBookStatus(book.id, newStatus === status ? null : newStatus);
@@ -22,7 +21,7 @@ const BookCard = ({ book, showActions = true }) => {
   const handleRemove = () => {
     removeFromLibrary(book.id);
   };
-
+  
   const handleFavorite = () => {
     toggleFavorite(book.id);
   };
@@ -36,9 +35,9 @@ const BookCard = ({ book, showActions = true }) => {
       <p className="book-author">{book.author}</p>
       <div className="book-divider"></div>
       <div className="book-actions">
-        {showActions && (
-          <>
-            {isInLibrary ? (
+        <div className="action-buttons">
+          {showActions && (
+            isInLibrary ? (
               <>
                 <button 
                   className={`action-btn ${status === 'reading' ? 'active' : ''}`}
@@ -50,7 +49,7 @@ const BookCard = ({ book, showActions = true }) => {
                   className={`action-btn ${status === 'read' ? 'active' : ''}`}
                   onClick={() => handleStatusClick('read')}
                 >
-                  Прочитал
+                  Прочитано
                 </button>
                 <button 
                   className="action-btn remove-btn"
@@ -66,15 +65,17 @@ const BookCard = ({ book, showActions = true }) => {
               >
                 Добавить
               </button>
-            )}
-            <button 
-              className={`favorite-btn ${favorite ? 'active' : ''}`}
-              onClick={handleFavorite}
-            >
-              ❤️
-            </button>
-          </>
-        )}
+            )
+          )}
+        </div>
+        <div className="favorite-wrapper">
+          <button className="favorite-btn" onClick={handleFavorite}>
+            <img 
+              src={favorite ? "/serd.png" : "/serd-not.png"} 
+              alt={favorite ? "Убрать из избранного" : "Добавить в избранное"}
+            />
+          </button>
+        </div>
       </div>
     </div>
   );

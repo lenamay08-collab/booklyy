@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useBooks } from '../context/BookContext';
-import BookCarousel from '../components/BookCarousel';  // импортируем карусель
+import BookCarousel from '../components/BookCarousel';
 import './Catalog.css';
 
 const chashka = '/chashka.png';
@@ -9,11 +9,16 @@ const loopa = '/loopa.png';
 const Catalog = () => {
   const { catalogBooks } = useBooks();
   const [searchTerm, setSearchTerm] = useState('');
+    console.log('catalogBooks in Catalog:', catalogBooks);
+    console.log('searchTerm:', searchTerm);
 
   const filteredBooks = catalogBooks.filter(book =>
-    book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    book.author.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  book.author.toLowerCase().includes(searchTerm.toLowerCase())
+);
+
+console.log('filteredBooks length:', filteredBooks.length);
+console.log('filteredBooks:', filteredBooks);
 
   return (
     <div className="catalog-page">
@@ -36,11 +41,11 @@ const Catalog = () => {
         </div>
         <div className="catalog-decor">
           <div className="decor-items">
-              <img src={chashka} alt="" />
+              <img src={chashka} alt=""/>
           </div>
         </div>
         {filteredBooks.length > 0 ? (
-          <BookCarousel books={filteredBooks} />   // ← вместо сетки
+          <BookCarousel books={filteredBooks}/>
         ) : (
           <div className="no-results">
             <p>Книги не найдены</p>

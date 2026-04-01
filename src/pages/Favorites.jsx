@@ -16,28 +16,64 @@ const Favorites = () => {
     book.author.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const hasBooks = favoriteBooks.length > 0;
+
   return (
-    <div className="page-container">
-      <h1>Избранное</h1>
-      <div className="library-controls">
-        <div className="search-box">
-          <input
-            type="text"
-            placeholder="Поиск в избранном..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
+    <div className="page-container favorites-page">
+      <div className="library-header">
+        <h1>Избранное</h1>
+        {hasBooks && (
+          <div className="library-search">
+            <input
+              type="text"
+              placeholder="Поиск в избранном..."
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+              className="search-input"
+            />
+            <span className="search-icon">
+              <img src="/loopa.png" alt="Поиск" />
+            </span>
+          </div>
+        )}
       </div>
-      {filteredBooks.length > 0 ? (
-        <div className="books-grid">
-          {filteredBooks.map(book => (
-            <BookCard key={book.id} book={book} showActions={true} />
-          ))}
+
+      {hasBooks && (
+        <div className="favorites-decor">
+          <img src="/chashka.png" alt="" />
         </div>
-      ) : (
-        <p>У вас пока нет избранных книг. Добавьте их, нажав на сердечко.</p>
       )}
+
+      <div className="library-content">
+        {!hasBooks ? (
+          <div className="empty-library-container">
+            <img src="/openbook.png" alt="" className="empty-library-image" />
+            <div className="empty-library-message">
+              <p>
+                У вас пока ничего не добавлено в «Избранное».
+                <br />
+                Нажмите на сердечко рядом с книгой,
+                <br />
+                чтобы сохранить её сюда.
+              </p>
+            </div>
+          </div>
+        ) : (
+          <>
+            {filteredBooks.length > 0 ? (
+              <div className="books-grid">
+                {filteredBooks.map(book => (
+                  <BookCard key={book.id} book={book} showActions={true} />
+                ))}
+              </div>
+            ) : (
+              <div className="no-results-message">
+                <p>Нет книг по вашему запросу.</p>
+              </div>
+            )}
+          </>
+        )}
+      </div>
     </div>
   );
 };

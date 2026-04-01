@@ -1,5 +1,3 @@
-/* src/components/Header.css */
-
 .header {
   background-color: #EDE6E1;
   max-width: calc(100% - 200px);
@@ -53,7 +51,6 @@
   align-items: center;
 }
 
-/* Базовые стили ссылок */
 .header-nav a {
   transition: color 0.2s ease;
   position: relative;
@@ -61,12 +58,10 @@
   color: #4A4A4A;
 }
 
-/* Ховер для обычных ссылок (все, кроме последней — кнопки) */
 .header-nav a:hover:not(:last-child) {
   color: #8D9F9A;
 }
 
-/* Стиль для кнопки «Войти» (последняя ссылка) */
 .header-nav a:last-child {
   background-color: #9EAEAA;
   color: white;
@@ -75,20 +70,17 @@
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-/* Ховер для кнопки */
 .header-nav a:last-child:hover {
   background-color: #8D9F9A;
   transform: translateY(-2px);
-  color: white; /* гарантия, что цвет текста не изменится */
+  color: white;
 }
 
-/* Стиль для активной ссылки */
 .header-nav a.active {
   color: #9EAEAA;
   font-weight: 600;
 }
 
-/* Подчёркивание для активной ссылки */
 .header-nav a.active::after {
   content: '';
   position: absolute;
@@ -100,7 +92,6 @@
   border-radius: 2px;
 }
 
-/* Блок пользователя, когда авторизован */
 .user-info {
   display: flex;
   align-items: center;
@@ -125,16 +116,4 @@
 
 .logout-btn:hover {
   background-color: #8D9F9A;
-  /* Убрал изменение цвета текста, оставил только фон */
-}
-
-/* Мобильные стили */
-@media (max-width: 768px) {
-  .header-nav {
-    gap: 20px;
-    margin-right: 0;
-  }
-  .header-nav a:last-child {
-    padding: 6px 12px;
-  }
 }

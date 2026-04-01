@@ -6,11 +6,12 @@ import Catalog from './pages/Catalog';
 import Favorites from './pages/Favorites';
 import Library from './pages/Library';
 import SignIn from './pages/SignIn';
-import Modal from './components/Modal';
+import AuthModal from './components/AuthModal';
 import './global.css';
+import ResetPassword from './pages/ResetPassword';
 
 function AppContent() {
-  const { isLoginModalOpen, closeLoginModal, login } = useBooks();
+  const { isLoginModalOpen, closeLoginModal, login, register } = useBooks();
   return (
     <>
       <Header />
@@ -20,8 +21,14 @@ function AppContent() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/library" element={<Library />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>
-      <Modal isOpen={isLoginModalOpen} onClose={closeLoginModal} onLogin={login} />
+      <AuthModal
+        isOpen={isLoginModalOpen}
+        onClose={closeLoginModal}
+        onLogin={login}
+        onRegister={register}
+      />
     </>
   );
 }

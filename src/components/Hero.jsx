@@ -1,4 +1,3 @@
-// src/components/Hero.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useBooks } from '../context/BookContext';
@@ -22,7 +21,7 @@ const Hero = () => {
           сохраняйте избранное и следите за прогрессом
         </p>
         <div className="hero-buttons">
-          <Link to="/catalog" className="btn btn-primary">Начать читать</Link> {/* Теперь ведет на каталог */}
+          <Link to="/catalog" className="btn btn-primary">Начать читать</Link> 
  <a 
             href="#" 
             onClick={(e) => { e.preventDefault(); openLoginModal(); }}
