@@ -33,6 +33,7 @@ const Header = () => {
         ) : (
           <a href="#" onClick={handleSignInClick}>Войти</a>
         )}
+
       </nav>
     </header>
   );

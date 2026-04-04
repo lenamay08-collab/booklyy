@@ -313,6 +313,14 @@
     z-index: 1;
   }
   .library-header{
+    justify-content: center;}
+  .library-header h1{
     justify-content: center;
+    font-size: 30px;
+  }
+  .empty-library-message p{
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
   }
 }

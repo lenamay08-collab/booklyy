@@ -19,7 +19,6 @@
   width: 90%;
   box-sizing: border-box;
 }
-
 .carousel-track::-webkit-scrollbar {
   display: none;
 }

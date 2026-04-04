@@ -42,7 +42,9 @@
 .header-nav {
   display: flex;
   gap: 7vw;
+  justify-content: space-around;
   align-items: center;
+  min-width: 225px
 }
 
 .header-nav a {
@@ -111,11 +113,44 @@
 .logout-btn:hover {
   background-color: #8D9F9A;
 }
+
 @media (max-width: 900px) {
   .header-logo {
     margin-left: 0;
   }
-  .nav_buttons{
-    display: none;
+  .header{
+    padding: 16px 40px;
+  }
+
+}
+@media (max-width: 736px) {
+  .header-nav a{
+    font-size: 11px;
+  }
+}
+@media (max-width: 660px) {
+  .header-nav a{
+    font-size: 9px;
+  }
+}
+@media (max-width: 600px) {
+  .header{
+    flex-direction: column;
+  }
+}
+@media (max-width: 460px) {
+  .header-nav{
+    gap: 15px;
+  }
+  .header-nav a{
+    font-size: 8px;
+  }
+}
+@media (max-width: 430px) {
+  .header-nav{
+    gap: 13px;
+  }
+  .header-nav a{
+    font-size: 7px;
   }
 }

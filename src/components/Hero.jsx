@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useBooks } from '../context/BookContext';
 import './Hero.css';
@@ -22,7 +21,7 @@ const Hero = () => {
         </p>
         <div className="hero-buttons">
           <Link to="/catalog" className="btn btn-primary">Начать читать</Link> 
- <a 
+          <a 
             href="#" 
             onClick={(e) => { e.preventDefault(); openLoginModal(); }}
             className="btn btn-secondary"
