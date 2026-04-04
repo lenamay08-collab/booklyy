@@ -20,18 +20,13 @@
 
 .header-logo {
   margin-left: 90px;
+  margin-right: 20px;
   margin-bottom: -10px;
   font-family: 'Playfair Display', serif;
   font-size: 24px;
   font-weight: 600;
   color: #2C2C2C;
   letter-spacing: -0.5px;
-}
-
-@media (max-width: 768px) {
-  .header-logo {
-    margin-left: 0;
-  }
 }
 
 .header-logo a {
@@ -46,8 +41,7 @@
 
 .header-nav {
   display: flex;
-  gap: 130px;
-  margin-right: 90px;
+  gap: 7vw;
   align-items: center;
 }
 
@@ -116,4 +110,12 @@
 
 .logout-btn:hover {
   background-color: #8D9F9A;
+}
+@media (max-width: 900px) {
+  .header-logo {
+    margin-left: 0;
+  }
+  .nav_buttons{
+    display: none;
+  }
 }

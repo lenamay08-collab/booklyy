@@ -10,6 +10,7 @@ html, body, #root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 body {
@@ -45,4 +46,20 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
   color: inherit;
+}
+@media (max-width: 1070px) {
+  h1{
+    font-size: 5svw;
+  }
+  h2{
+    font-size: 1.6svw;
+  }
+}
+@media (max-width: 690px) {
+  h1{
+    font-size: 34px;
+  }
+  h2{
+    font-size: 11px;
+  }
 }

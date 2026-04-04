@@ -22,9 +22,9 @@ const Header = () => {
         <img src={logo} alt="" />
       </div>
       <nav className="header-nav">
-        <Link to="/" className={isActive('/') ? 'active' : ''}>Главная</Link>
-        <Link to="/library" className={isActive('/library') ? 'active' : ''}>Моя библиотека</Link>
-        <Link to="/favorites" className={isActive('/favorites') ? 'active' : ''}>Избранное</Link>
+        <Link to="/" className={(isActive('/') ? 'active' : '') + ' nav_buttons'}>Главная</Link>
+        <Link to="/library" className={(isActive('/library') ? 'active' : '') + ' nav_buttons'}>Моя библиотека</Link>
+        <Link to="/favorites" className={(isActive('/favorites') ? 'active' : '') + ' nav_buttons'}>Избранное</Link>
         {user ? (
           <div className="user-info">
             <span>Привет, {user.username}</span>

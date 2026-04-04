@@ -301,4 +301,18 @@
   height: 300px;
   opacity: 0.3;
 }
-
+@media (max-width: 1010px) {
+  .page-container, .page-container.library-page {
+    position: relative;
+    padding: 0;
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .library-header{
+    justify-content: center;
+  }
+}
