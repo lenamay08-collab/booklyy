@@ -27,7 +27,7 @@ const Header = () => {
         <Link to="/favorites" className={(isActive('/favorites') ? 'active' : '') + ' nav_buttons'}>Избранное</Link>
         {user ? (
           <div className="user-info">
-            <span>Привет, {user.username}</span>
+            <p id = "user-name">Привет, {user.username}</p>
             <button onClick={logout} className="logout-btn">Выйти</button>
           </div>
         ) : (

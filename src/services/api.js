@@ -1,6 +1,6 @@
 import axios from 'axios';
-
-const API_URL = 'http://localhost:5000/api';
+//В КОНЦЕ /api PORT 5000 !!!!!!!!!!!!!!!!!!!!!
+const API_URL = 'https://8a737b7e50b9e8ff-185-191-56-132.serveousercontent.com/api';
 
 const api = axios.create({
   baseURL: API_URL,

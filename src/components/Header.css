@@ -137,6 +137,14 @@
   .header{
     flex-direction: column;
   }
+
+  #user-name {
+    font-size: 10px;
+  }
+
+  .user-info {
+    scale: 0.8;
+  }
 }
 @media (max-width: 460px) {
   .header-nav{
