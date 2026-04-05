@@ -136,7 +136,6 @@
     flex-direction: column;
     justify-content: center;
     padding-bottom: 50px;
-    overflow: hidden;
     z-index: 1;
   }
   .catalog-title-section, .catalog-search{
@@ -144,8 +143,19 @@
   }
 }
 @media (max-width : 400px) {
-  .catalog-title {
-    font-size: 40px;
+  .catalog-title-section{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .catalog-title, .catalog-subtitle {
+    margin-left: -30px;
+    text-align: center;
+    font-size: 30px;
+  }
+  .catalog-subtitle{
+    font-size: 15px;
   }
   .catalog-search{
     margin-bottom: 0;

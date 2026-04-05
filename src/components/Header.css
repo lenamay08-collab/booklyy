@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 40px;
+  padding: 20px 20px;
   font-size: 14px;
   font-weight: 500;
   color: #4A4A4A;
@@ -52,6 +52,7 @@
   position: relative;
   text-decoration: none;
   color: #4A4A4A;
+  white-space: nowrap;
 }
 
 .header-nav a:hover:not(:last-child) {
@@ -91,10 +92,11 @@
 .user-info {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   background-color: #f0f0f0;
   padding: 5px 12px 5px 16px;
   border-radius: 30px;
+  white-space: nowrap;
 }
 
 .logout-btn {
@@ -117,15 +119,22 @@
 @media (max-width: 900px) {
   .header-logo {
     margin-left: 0;
+    scale: .8;
   }
   .header{
     padding: 16px 40px;
   }
-
+  .logout-btn{
+    font-size: 10px;
+  }
 }
 @media (max-width: 736px) {
   .header-nav a{
     font-size: 11px;
+  }
+  .user-info {
+    margin-right: -20px;
+    scale: 0.8;
   }
 }
 @media (max-width: 660px) {
@@ -137,28 +146,20 @@
   .header{
     flex-direction: column;
   }
-
   #user-name {
     font-size: 10px;
-  }
-
-  .user-info {
-    scale: 0.8;
   }
 }
 @media (max-width: 460px) {
   .header-nav{
-    gap: 15px;
+    gap: 10px;
   }
   .header-nav a{
     font-size: 8px;
   }
 }
 @media (max-width: 430px) {
-  .header-nav{
-    gap: 13px;
-  }
   .header-nav a{
-    font-size: 7px;
+    font-size: 6px;
   }
 }
